@@ -6,8 +6,8 @@
 <script src="svd_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="svd_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="svd_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="svd_files/libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.30">
+<link href="svd_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="AP">
   <title>Singular-value decomposition</title>
@@ -250,7 +250,7 @@ I\vec{x} = M^{-1}\vec{v}
 <section id="finally" class="slide level2">
 <h2>Finally…</h2>
 <p><span class="math display">\[
-A_{(n \times m)} = U_{(n \times n)} D_{(n \times m)} V^T_{(m \times m)}
+A_{(m \times n)} = U_{(m \times m)} D_{(m \times n)} V^T_{(n \times n)}
 \]</span></p>
 <ul>
 <li><p>U is a orthogonal m. of <em>left-singular</em> (col.) vectors</p></li>
@@ -264,9 +264,9 @@ A_{(n \times m)} = U_{(n \times n)} D_{(n \times m)} V^T_{(m \times m)}
 <p>SVD generalises eigen-decomposition:</p>
 <ul>
 <li><p>any real matrix has one</p></li>
-<li><p>even non-square m. admit one</p></li>
+<li><p>even non-square matrices admit one</p></li>
 </ul>
-<p>overconstrained systems (m&gt;n) can now be solved</p>
+<p>overconstrained systems (more rows than cols.) can now be solved</p>
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
@@ -376,8 +376,8 @@ A\vec{x} = \vec{v}
 \]</span></p>
 <p>for non-square (rectangular) matrices:</p>
 <ul>
-<li><p>n &gt;m: the problem is overconstrained (no solution?)</p></li>
-<li><p>n &lt; m: the problem is overparametrized (many sols.?)</p></li>
+<li><p>rows &gt; columns: the problem is overconstrained (no solution?)</p></li>
+<li><p>rows &lt; columns: the problem is overparametrized (infinite sols.?)</p></li>
 </ul>
 </section>
 <section id="reminder-the-ideal-procedure" class="slide level2">
@@ -400,7 +400,7 @@ I\vec{x} = A^{-1} \vec{v}
 </section>
 <section id="the-pseudo-inverse" class="slide level2">
 <h2>The pseudo-inverse</h2>
-<p>Given A_{(n m)}, Penrose seeks a matrix <span class="math inline">\(A^+\)</span> that would work the same as the left inverse:</p>
+<p>Given A_{(m n)}, Penrose seeks a matrix <span class="math inline">\(A^+\)</span> that would work the same as the left inverse:</p>
 <p><span class="math inline">\(A^+ A \approx I\)</span></p>
 <div class="fragment">
 <p>strenghten up the main diagonal before inversion:</p>
